@@ -159,7 +159,7 @@ def run(
                     n = (det[:, 5] == c).sum()  # detections per class
                     s += f"{n} {names[int(c)]}{'s' * (n > 1)}, "  # add to string
                     y=y+30
-                    cv2.putText(im0,f"{n} {names[int(c)]:{n}}",(10,y),cv2.FONT_HERSHEY_DUPLEX,0.6,(100,255,92),1,cv2.LINE_8)
+                    cv2.putText(im0,f"{n} {names[int(c)]:{n}}",(10,y),cv2.FONT_HERSHEY_DUPLEX,0.6,(255,255,255),1,cv2.LINE_8)
 
                 # Write results
                 for *xyxy, conf, cls in reversed(det):
